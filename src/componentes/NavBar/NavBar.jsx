@@ -3,7 +3,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import CartWidget from "../CartWidget/CartWidget";
-import { Link,NavLink } from "react-router-dom/cjs/react-router-dom.min";
+import { Link, NavLink } from "react-router-dom";
 
 function NavBar() {
   return (

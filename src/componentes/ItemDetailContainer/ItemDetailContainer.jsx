@@ -4,7 +4,7 @@ import { ItemCounter } from "../ItemCounter/ItemCounter";
 import { mFetch } from "../../helper/mFetch";
 
 export const ItemDetailContainer = () => {
-  const [product, setProduct] = useState({});
+  const [product, setProduct] = useState(null);
   const { pid } = useParams();
 
   console.log(pid);
@@ -13,7 +13,7 @@ export const ItemDetailContainer = () => {
     mFetch(pid)
       .then((resultado) => setProduct(resultado))
       .catch((error) => console.log(error));
-  }, []);
+  }, [pid]);
 
   return (
     <div className="row">

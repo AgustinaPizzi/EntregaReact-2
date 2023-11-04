@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { mFetch } from "../../helper/mFetch";
 import { ItemList } from "../ItemList/ItemList";
 
+
 function ItemListContainer({ greeting = "BIENVENIDO 👋🏼" }) {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -17,13 +18,11 @@ function ItemListContainer({ greeting = "BIENVENIDO 👋🏼" }) {
       .then(resultado => setProducts(resultado))
       .catch(error => console.log(error))
       .finally(()=> setLoading(false))
-    }
-    
-  }, [cid]);
+    }}, [cid]);
 
-  const onAdd = cant => {
-    console.log('cantidad seleccionada: ',cant)
-  }
+  // const onAdd = cant => {
+  //   console.log('cantidad seleccionada: ',cant)
+  // }
 
   return (
     <>
